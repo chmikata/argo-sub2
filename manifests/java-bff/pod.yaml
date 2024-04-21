@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: java-bff
+  labels:
+    name: java-bff
+spec:
+  containers:
+    - name: java-bff
+      image: chmikata/java-bff:latest
+      resources:
+        limits:
+          memory: "256Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 80
